@@ -1,0 +1,34 @@
+.inputone{
+    padding-right: 1.8rem;
+}
+.resultado{
+    background-color: rgb(28, 28, 28);
+    color: white;
+    padding: 1rem;
+    width: auto;
+    margin-left: 0.6rem;
+    border-radius: 12px;
+}
+.resultado p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.resultado span{
+    margin-left: 4px;
+}
+
+/* --------------- COLORES PARA RESULTADOS ---------------*/
+.sumar{
+    color: #3386ff;
+}
+.restar{
+    color: #f3da03;
+}
+.multiplicar{
+    color: #34dff5;
+}
+.dividir{
+    color: #21d983;
+
+}

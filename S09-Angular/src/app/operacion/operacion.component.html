@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <hr style="width: 30%;">
+    <h4 class="mb-3">{{ title }}</h4>
+    <hr style="width: 30%;">
+    <form class="row g-2 mt-1">
+        <div class="row mb-3">
+            <label class="col-auto col-form-label inputone">{{ inputTitle }}</label>
+            <div class="col-auto">
+                <input type="number" class="form-control" name="valor1" [(ngModel)]="valor1">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-auto col-form-label">{{ inputTitle2 }}</label>
+            <div class="col-auto">
+                <input type="number" class="form-control" name="valor2" [(ngModel)]="valor2">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div  class="col-auto">
+                <select class="form-select" name="calcular" [(ngModel)]="calcular">
+                    <option selected value="elegir">Elija una opción</option>
+                    <option value="suma">Sumar</option>
+                    <option value="resta">Restar</option>
+                    <option value="multiplicacion">Multiplicar</option>
+                    <option value="division">Dividir</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3 resultado" [ngClass]="{sumar: calcular === 'suma', restar: calcular === 'resta', 
+        multiplicar: calcular === 'multiplicacion', dividir : calcular === 'division'}">
+            <p>
+                RESULTADO: 
+                <span *ngIf="calcular !== 'elegir'">{{ result() }}</span>
+                <span *ngIf="calcular === 'elegir'" [ngStyle]="{'color' : 'red'}">(No eligió operación)</span>
+            </p>
+        </div>
+    </form>
+</div>

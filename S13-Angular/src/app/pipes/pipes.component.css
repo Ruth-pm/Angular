@@ -1,0 +1,18 @@
+label{
+    font-weight: 500;
+}
+span{
+    font-weight: 500;
+}
+p{
+    color: rgb(10, 0, 156);
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+thead{
+    background-color: #4caf50;
+    color: #fff;
+    align-items: center;
+}

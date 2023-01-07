@@ -1,0 +1,85 @@
+<!----------------------------------------------- Ejercicio 01 ----------------------------------------------->
+<div class="container d-flex justify-content-center mt-5">
+  <div class="row g-3 align-items-center mb-4">
+    <h5 class="text-center text-danger">USO DE PIPES</h5>
+    <div class="col-auto">
+      <label class="col-form-label">Valor:</label>
+    </div>
+    <div class="col-9">
+      <input type="text" class="form-control text-center" [(ngModel)]="texto" />
+    </div>
+    <span class="text-center">Resultado: {{ texto | uppercase }}</span>
+  </div>
+</div>
+
+<hr />
+
+<!----------------------------------------------- Ejercicio 02 ----------------------------------------------->
+<div class="container d-flex justify-content-center mt-5">
+  <div class="row g-3 align-items-center mb-4">
+    <h5 class="text-center text-danger">CURRENCY PIPES</h5>
+    <div class="col-auto">
+      <label class="col-form-label">Valor:</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control text-center" [(ngModel)]="valor" />
+    </div>
+    <div class="col-9">
+      <select class="form-select" name="tipo" [(ngModel)]="tipo">
+        <option disabled selected value="seleccionar">
+          Selecciona el tipo de moneda
+        </option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+      <p class="mt-4" [hidden]="tipo == ''">
+        <span>{{ tipo }}:</span> {{ valor | currency : tipo }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<!----------------------------------------------- Ejercicio 03 ----------------------------------------------->
+<div class="container d-flex justify-content-center mt-5">
+  <div class="row g-3 align-items-center mb-4">
+    <h5 class="text-center text-danger">TRANSFORMAR FECHA A:</h5>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">{{ fecha | uppercase }}</th>
+          <th scope="col">{{ hora | uppercase }}</th>
+          <th scope="col">{{ tiempo | uppercase }}</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row"><i class="bi bi-arrow-right-circle-fill"></i></th>
+          <td>2023-01-06</td>
+          <td>23:58</td>
+          <td>{{ "2023-01-06 23:58" | mypipe }}</td>
+        </tr>
+        <tr>
+          <th scope="row"><i class="bi bi-arrow-right-circle-fill"></i></th>
+          <td>2023-01-06</td>
+          <td>20:15</td>
+          <td>{{ "2023-01-06 20:15" | mypipe }}</td>
+        </tr>
+        <tr>
+          <th scope="row"><i class="bi bi-arrow-right-circle-fill"></i></th>
+          <td>2023-01-02</td>
+          <td>16:00</td>
+          <td>{{ "2023-01-02 16:00" | mypipe }}</td>
+        </tr>
+        <tr>
+          <th scope="row"><i class="bi bi-arrow-right-circle-fill"></i></th>
+          <td>2022-08-13</td>
+          <td>15:30</td>
+          <td>{{ "2022-08-13 15:30" | mypipe }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

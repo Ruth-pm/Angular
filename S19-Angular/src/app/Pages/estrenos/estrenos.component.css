@@ -1,0 +1,17 @@
+.container{
+    padding: 1rem;
+    margin: 8rem 0;
+    text-align: center;
+    color: rgb(48, 48, 48);
+}
+h2{
+    font-size: 35px;
+    font-weight: 700;
+    padding: 2rem;
+    border-bottom: 6px solid #03cb81;
+}
+p{
+    font-size: 17px;
+    padding: 2rem 8rem;
+    border-bottom: 6px solid #03cb81;
+}

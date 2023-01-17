@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>{{ "Películas" | uppercase}}</h2>
+</div>
+<div class="contenido-movie">
+    <div class="movie-container" *ngFor="let movie of movies">
+        <p class="title">{{ movie.title }}</p>
+        <img [src]="movie.img" alt="movie image" width="240"/>
+        <p class="description">{{ movie.description }}</p>
+        <p class="genero"><span>Género: </span>{{ movie.genero }}</p>
+    </div>
+</div>  

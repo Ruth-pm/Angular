@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <h2>Lista de Usuarios</h2>
+    <button (click)="mostrarUser()" class="btn btn-success mt-2 mb-3">Mostrar Usuarios</button>
+    <hr class="mt-0 mb-3">
+    <div *ngFor="let data of users">
+        <ul class="m-0">
+            <li>{{data.name}}</li>
+        </ul>
+    </div>
+</div>

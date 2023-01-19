@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link fs-5 pt-1" aria-disabled="true"><strong> Mi App </strong></a>
+          <a *ngIf="!sessionsService.isLogin" class="nav-link active" routerLink="login">Login</a>
+          <a class="nav-link" routerLink="post">Post</a>
+          <a class="nav-link" routerLink="users">Users</a>
+          <a class="nav-link" (click)="logout()" *ngIf="sessionsService.isLogin" routerLink="logout">Logout</a>
+        </div>
+      </div>
+    </div>
+</nav>
